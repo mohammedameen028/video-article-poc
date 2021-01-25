@@ -1,8 +1,10 @@
-# Getting Started with Create React App
-
+# Video Article project is a crystall ball idea POC 2020.  
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Technology 
+### `react js`
+### `node js`
+### `python`
 
 In the project directory, you can run:
 
