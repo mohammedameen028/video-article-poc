@@ -1,0 +1,46 @@
+
+  
+  .container {
+    width: 500px;
+  }
+  
+  .note {
+    color: gray;
+    margin: 8px 0;
+  }
+  
+  input.active:valid {
+    box-shadow: 0 0 5px 1px green;
+  }
+  
+  input.active:invalid {
+    box-shadow: 0 0 5px 1px red;
+  }
+  
+  .error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+
+  .labelText {
+    font-family: fantasy;
+    font-size: xx-large;
+    text-decoration: underline;
+    text-decoration-color: #3a34eb;
+}
+.labelDesc {
+  font-family: fantasy;
+  font-weight: bold;
+}
+
+.background{
+  background-image: url("https://www.meredith.com/sites/default/files/BL-HEADER-DEC17-8.jpg");
+}
+
+.customButtom{
+  font-size:"large";
+  font-Family:"revert";
+  border-Width: "medium";
+  color:black
+}
