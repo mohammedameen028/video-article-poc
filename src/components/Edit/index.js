@@ -1,15 +1,15 @@
 import React from "react";
 import Header from "../Header";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import { Grid, Paper, ButtonBase } from "@material-ui/core";
-import {data} from './images.json'
+import data from './images'
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 2,
   },
   paper: {
-    padding: theme.spacing(4),
+    padding: theme.spacing(2),
     textAlign: "center",
     color: theme.palette.text.secondary,
     //backgroundColor:"#8a8aff"
@@ -36,7 +36,7 @@ const Edit = () => {
       <Header />
       <div className={classes.root}>
         <Grid container spacing={1}>
-          <Grid container item xs={12} spacing={3}>
+          <Grid container item xs={10} spacing={5}>
             {data.map((item, key) => {
               return (
                 <Grid item xs={3}>
