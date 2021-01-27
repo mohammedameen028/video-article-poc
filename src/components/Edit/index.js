@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 2,
   },
   paper: {
-    padding: theme.spacing(2),
+    padding: theme.spacing(1),
     textAlign: "center",
     color: theme.palette.text.secondary,
     //backgroundColor:"#8a8aff"
@@ -39,7 +39,7 @@ const Edit = () => {
           <Grid container item xs={10} spacing={5}>
             {data.map((item, key) => {
               return (
-                <Grid item xs={3}>
+                <Grid item xs={2.5}>
                   <Paper name={item.name} className={classes.paper}>
                     <ButtonBase
                       key={key}
@@ -48,8 +48,8 @@ const Edit = () => {
                         className="imageScr"
                         alt={item.name}
                         src={item.logo}
-                        width="200px"
-                        height="180px"
+                        width="180px"
+                        height="150px"
                       />
                     </ButtonBase>
                     {/* <Typography gutterBottom variant="subtitle1">
