@@ -8,7 +8,8 @@ export default class Form extends React.Component {
     super(props);
     this.state = {
       Title: 'MEREDITH',
-      CreateDate: new Date().toLocaleString()
+      CreateDate: new Date().toLocaleString(),
+      Duration: Math.floor(Math.random() * 10)
     };
 
     this.handleChange = this.handleInputChange.bind(this);
@@ -42,13 +43,21 @@ export default class Form extends React.Component {
           </div>
           <div className="form-group">
             <label className="labelText">Created Date:</label><br />
-            <label className="labelDesc">{this.state.CreateDate}</label>
+            <label className="labelDesc">{this.state.CreateDate}</label><br />
+            <label className="labelText">Duration:</label><br />
+            <label className="labelDesc">{this.state.Duration} minutes</label>
             {/* <input name="email" type="email" value={this.state.email} onChange={this.handleChange} className="form-control" id="emailImput" /> */}
           </div>
-          <div style={{paddingTop:"5em"}}>
-            <Button variant="outlined" color="black" component={Link} to="/edit" style={{fontSize:"large", fontFamily:"revert", borderWidth: "medium"}}> Create New</Button>
+          <div>
+          <label className="labelText">Article Link:</label><br />
+          <a className="linkText" href="https://ew.com/podcasts/prince-harry-meghan-markle-first-podcast-episode/">https://ew.com/podcasts/prince-harry-meghan-markle-first-podcast-episode</a>
           </div>
-          {/* <input type="submit" value="Submit" className="btn btn-primary" /> */}
+          <div style = {{paddingTop:"4em"}}>
+            <Button variant="outlined" color="black" component={Link} to="/view" style={{fontSize:"large", fontFamily:"revert", borderWidth: "medium"}}> Export/Save</Button>
+          </div>
+          <div style={{paddingTop:"2em"}}>
+            <Button variant="outlined" color="black" component={Link} to="/Onecms" style={{fontSize:"large", fontFamily:"revert", borderWidth: "medium"}}> Create New</Button>
+          </div>
         </form>
       </div>
     )

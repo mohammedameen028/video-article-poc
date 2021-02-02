@@ -29,6 +29,13 @@
     text-decoration: underline;
     text-decoration-color: #3a34eb;
 }
+.linkText {
+  font-family: fantasy;
+  font-size: large;
+  font-weight: bold;
+  color: black;
+  text-decoration: underline;
+}
 .labelDesc {
   font-family: fantasy;
   font-weight: bold;
