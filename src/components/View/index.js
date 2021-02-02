@@ -6,6 +6,7 @@ import Header from "../Header";
 import Form from './Form'
 import {Link} from "react-router-dom";
 import '../View/index.css'
+import test from '../View/assets/test.mp4'
 
 
 const View = () => {
@@ -20,7 +21,7 @@ const View = () => {
           <div style = {{marginLeft:"80%", padding:"10px"}}>
             <Button variant="outlined" color="black" component={Link} to="/edit" style={{fontSize:"large", fontFamily:"revert", borderWidth: "medium"}}> Edit</Button>
           </div>
-          <ReactPlayer url="https://www.meredith.com/sites/default/files/NEWFRONT_2020_CUT_21_CC_NEW_MUSIC_GMAIL_720p30.mp4" playing={false} controls={true}/>
+          <ReactPlayer url={test} playing={false} controls={true}/>
         </Grid>
       </Grid>
     </div>

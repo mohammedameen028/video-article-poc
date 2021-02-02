@@ -198,6 +198,7 @@ import FastForwardIcon from '@material-ui/icons/FastForward';
 import editImage from './images/edit.png'
 import TextEdit from './images/TextEdit.png'
 import Modal from '@material-ui/core/Modal';
+import test from '../View/assets/test.mp4'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -353,7 +354,7 @@ function Edit() {
           Add Text
       </TabPanel>
       </div>
-      <ReactPlayer url="https://www.meredith.com/sites/default/files/NEWFRONT_2020_CUT_21_CC_NEW_MUSIC_GMAIL_720p30.mp4" playing={false} controls={true} width='100%' />
+      <ReactPlayer url={test} playing={false} controls={true} width='100%' />
       <div>
         <img src={editImage} style={{ width: '100%', height: '100%' }} />
         {/* <BottomNavigation
