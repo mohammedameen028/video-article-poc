@@ -42,7 +42,8 @@
 }
 
 .background{
-  background-image: url("https://www.meredith.com/sites/default/files/BL-HEADER-DEC17-8.jpg");
+  /* background-image: url("../Edit/images/meredith.jpg");
+  background-repeat: repeat-y; */
 }
 
 .customButtom{

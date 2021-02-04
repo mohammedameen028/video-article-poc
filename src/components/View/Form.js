@@ -1,6 +1,6 @@
 import React from 'react'
 import '../View/index.css'
-import { Button } from "@material-ui/core";
+import { Button, Paper } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
 export default class Form extends React.Component {
@@ -36,6 +36,8 @@ export default class Form extends React.Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit} >
+          <Paper>
+            <div style={{padding:"15px"}}>
           <div className="form-group">
             <label className="labelText" >Title:</label><br />
             <label className="labelDesc">{this.state.Title}</label>
@@ -52,11 +54,13 @@ export default class Form extends React.Component {
           <label className="labelText">Article Link:</label><br />
           <a className="linkText" href="https://ew.com/podcasts/prince-harry-meghan-markle-first-podcast-episode/">https://ew.com/podcasts/prince-harry-meghan-markle-first-podcast-episode</a>
           </div>
+          </div>
+          </Paper>
           <div style = {{paddingTop:"4em"}}>
-            <Button variant="outlined" color="black" component={Link} to="/view" style={{fontSize:"large", fontFamily:"revert", borderWidth: "medium"}}> Export/Save</Button>
+            <Button variant="contained" color="primary" component={Link} to="/view" style={{fontSize:"large", fontFamily:"revert", borderWidth: "medium"}}> Export/Save</Button>
           </div>
           <div style={{paddingTop:"2em"}}>
-            <Button variant="outlined" color="black" component={Link} to="/Onecms" style={{fontSize:"large", fontFamily:"revert", borderWidth: "medium"}}> Create New</Button>
+            <Button variant="contained" color="primary" component={Link} to="/Onecms" style={{fontSize:"large", fontFamily:"revert", borderWidth: "medium"}}> Create New</Button>
           </div>
         </form>
       </div>

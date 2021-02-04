@@ -23,7 +23,7 @@ const templateData = [
     },
     {
       img: tiktok,
-      title: 'TikTok',
+      title: 'TikTok Videos',
       author: 'TikTok',
       duration: '15-60 seconds',
       width: '33%'

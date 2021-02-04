@@ -7,7 +7,8 @@ import ButtonBase from '@material-ui/core/ButtonBase';
 import Typography from '@material-ui/core/Typography';
 import Toolbar from '@material-ui/core/Toolbar';
 import AppBar from '@material-ui/core/AppBar';
-
+import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
 // const useStyles = makeStyles((theme) => ({
 //   root: {
 //     display: 'flex',
@@ -73,6 +74,12 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: 'wrap',
     minWidth: 300,
     width: '100%',
+  },
+  paper: {
+    padding: theme.spacing(1),
+    textAlign: "center",
+    color: theme.palette.text.secondary,
+    //backgroundColor:"#8a8aff"
   },
   image: {
     position: 'relative',
@@ -153,9 +160,12 @@ const useStyles = makeStyles((theme) => ({
 },
 }));
 
-function Template() {
+function Template(props) {
   const classes = useStyles();
   const history = useHistory();
+  const { urlClicked } = props.location.state;
+
+  console.log("userClicjed:::", urlClicked);
   return (
     <>
     <Header />
@@ -166,7 +176,49 @@ function Template() {
     </Typography>
     </Toolbar>
     </AppBar>
-    <div className={classes.root}>
+    <div style={{marginLeft:"30%"}}>
+    <Grid container spacing={3}>
+            <Grid container item xs={8} spacing={5}>
+                {templateData.map((item,key) => {
+                  return (
+                    <Grid item xs={4}>
+                      <Paper name={item.title} className={classes.paper}>
+                        <ButtonBase
+                          key={key}
+                          onClick={() =>
+                            history.push({
+                              pathname: "/Edit",
+                              state: { urlClicked: urlClicked },
+                            })
+                          }
+                        >
+                          <img
+                            className="imageScr"
+                            alt={item.title}
+                            src={item.img}
+                            width="150px"
+                            height="140px"
+                          />
+                        </ButtonBase>
+                        <Typography
+                          component="span"
+                          variant="subtitle1"
+                          color="inherit"
+                        >
+                          {item.title}({item.duration})
+                          <span className={classes.imageMarked} />
+                        </Typography>
+                      </Paper>
+                    </Grid>
+                  );
+                })}
+              </Grid>
+            </Grid>
+</div>
+
+
+
+    {/* <div className={classes.root}>
       {templateData.map((image) => (
         <ButtonBase
           focusRipple
@@ -176,7 +228,10 @@ function Template() {
           style={{
             width: image.width,
           }}
-          onClick={() => history.push('/Edit')}
+          onClick={() => history.push({
+            pathname: '/Edit',
+            state: {urlClicked:urlClicked}
+          })}
         >
           <span
             className={classes.imageSrc}
@@ -199,7 +254,7 @@ function Template() {
           </span>
         </ButtonBase>
       ))}
-    </div>
+    </div> */}
     </>
   );
 }

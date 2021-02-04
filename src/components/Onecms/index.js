@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Header from "../Header";
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -101,6 +101,25 @@ function Onecms() {
   const history = useHistory();
   const classes = useStyles();
 
+  const [state, setstate] = useState({urlClicked: 0})
+
+  const handleclick = (e) => {
+    console.log("inside!!!!", e.row.id);
+    setstate((prevState) => {
+      return{
+        ...prevState,
+        urlClicked: e.row.id
+      }
+    })
+  }
+
+  const handleProceed = (state) => {
+    history.push({
+      pathname: `/Template`,
+      state: {urlClicked:state.urlClicked}
+    })
+  }
+
   return (
     <>
     <Header/>
@@ -126,10 +145,10 @@ function Onecms() {
         </Toolbar>
       </AppBar>
       <div style={{ height: 400, width: '100%' }}>
-      <DataGrid rows={rows} columns={columns} pageSize={5}/>
+      <DataGrid rows={rows} columns={columns} pageSize={5} onRowClick={(e) => handleclick(e)}/>
       </div>
       <div style={{marginLeft:"40%", padding:"1em"}}>
-        <Button variant="contained" color="primary" onClick={() => history.push('/Template')}>
+        <Button variant="contained" color="primary" onClick={(e) => handleProceed(state)}>
           Proceed to Edit
         </Button>
         </div>

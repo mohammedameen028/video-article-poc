@@ -199,6 +199,8 @@ import editImage from './images/edit.png'
 import TextEdit from './images/TextEdit.png'
 import Modal from '@material-ui/core/Modal';
 import test from '../View/assets/test.mp4'
+import video2 from '../View/assets/recipetest.mp4'
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -270,9 +272,13 @@ function valuetext(value) {
   return `${value}°C`;
 }
 
-function Edit() {
+function Edit(props) {
   const classes = useStyles();
   const history = useHistory();
+
+  const { urlClicked } = props.location.state;
+
+  console.log("urlClicked last:::", urlClicked);
   const [value, setValue] = React.useState(0);
   const [modalStyle] = React.useState(getModalStyle);
   const [open, setOpen] = React.useState(false);
@@ -354,7 +360,12 @@ function Edit() {
           Add Text
       </TabPanel>
       </div>
+      {urlClicked === 1 ?
       <ReactPlayer url={test} playing={false} controls={true} width='100%' />
+      :
+      <ReactPlayer url={video2} playing={false} controls={true} width='100%' />
+      }
+      
       <div>
         <img src={editImage} style={{ width: '100%', height: '100%' }} />
         {/* <BottomNavigation

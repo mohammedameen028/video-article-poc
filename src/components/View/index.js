@@ -19,7 +19,7 @@ const View = () => {
         </Grid>
         <Grid item xs={6} style={{paddingTop:"8em"}}>
           <div style = {{marginLeft:"80%", padding:"10px"}}>
-            <Button variant="outlined" color="black" component={Link} to="/edit" style={{fontSize:"large", fontFamily:"revert", borderWidth: "medium"}}> Edit</Button>
+            <Button variant="contained" color="primary" component={Link} to="/edit" style={{fontSize:"large", fontFamily:"revert", borderWidth: "medium"}}> Edit</Button>
           </div>
           <ReactPlayer url={test} playing={false} controls={true}/>
         </Grid>
