@@ -276,7 +276,7 @@ function Edit(props) {
   const classes = useStyles();
   const history = useHistory();
 
-  const { urlClicked } = props.location.state;
+  const { urlClicked } = props.location.state || {urlClicked :'0'};
 
   console.log("urlClicked last:::", urlClicked);
   const [value, setValue] = React.useState(0);

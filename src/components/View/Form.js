@@ -52,7 +52,7 @@ export default class Form extends React.Component {
           </div>
           <div>
           <label className="labelText">Article Link:</label><br />
-          <a className="linkText" href="https://ew.com/podcasts/prince-harry-meghan-markle-first-podcast-episode/">https://ew.com/podcasts/prince-harry-meghan-markle-first-podcast-episode</a>
+          <a className="linkText" href="https://people.com/royals/prince-harrys-friend-tom-bradby-opens-up-about-harrys-heartbreak-and-royal-family-tensions/">https://people.com/royals/prince-harrys-friend-tom-bradby-opens-up-about-harrys-heartbreak-and-royal-family-tensions/</a>
           </div>
           </div>
           </Paper>
